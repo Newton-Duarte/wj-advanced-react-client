@@ -5,11 +5,16 @@ import * as S from './styles';
 import { Logo } from '../Logo';
 import { Button } from '../Button';
 import Container from '../Container';
+import { LogoProps } from '@/types/api';
 
-const SectionHero = () => (
+type Props = {
+  logo: LogoProps;
+};
+
+const SectionHero = ({ logo }: Props) => (
   <S.Wrapper>
     <Container>
-      <Logo />
+      <Logo {...logo} />
 
       <S.Content>
         <S.TextBlock>
