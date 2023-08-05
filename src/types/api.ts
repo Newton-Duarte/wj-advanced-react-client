@@ -5,6 +5,8 @@ export type LogoProps = {
 
 export type LandingPageProps = {
   logo: LogoProps;
+  header: HeaderProps;
+  about: SectionAboutProjectProps;
 };
 
 export type LandingPageResponse = {
@@ -13,7 +15,8 @@ export type LandingPageResponse = {
       id: string;
       attributes: {
         logo: LogoResponse;
-        createdAt: string;
+        header: HeaderProps;
+        sectionAboutProject: SectionAboutProjectProps;
       };
     };
   };
@@ -24,6 +27,36 @@ export type LogoResponse = {
     attributes: {
       alternativeText: string;
       url: string;
+    };
+  };
+};
+
+export type HeaderProps = {
+  title: string;
+  description: string;
+  button: {
+    label: string;
+    url: string;
+  };
+  image: {
+    data: {
+      attributes: {
+        alternativeText: string;
+        url: string;
+      };
+    };
+  };
+};
+
+export type SectionAboutProjectProps = {
+  title: string;
+  description: string;
+  image: {
+    data: {
+      attributes: {
+        alternativeText: string;
+        url: string;
+      };
     };
   };
 };
