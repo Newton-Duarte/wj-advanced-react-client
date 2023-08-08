@@ -8,9 +8,10 @@ export type LandingPageProps = {
   header: HeaderProps;
   about: SectionAboutProjectProps;
   sectionTech: SectionTechProps;
-  sectionConcepts: SectionTechProps;
+  sectionConcepts: SectionConceptsProps;
   sectionModules: SectionModulesProps;
   sectionAgenda: SectionAgendaProps;
+  pricingBox: PricingBoxProps;
 };
 
 export type LandingPageResponse = {
@@ -25,6 +26,7 @@ export type LandingPageResponse = {
         sectionConcepts: SectionConceptsProps;
         sectionModules: SectionModulesProps;
         sectionAgenda: SectionAgendaProps;
+        pricingBox: PricingBoxProps;
       };
     };
   };
@@ -92,7 +94,7 @@ export type SectionConceptsProps = {
   concepts: {
     id: string;
     title: string;
-  };
+  }[];
 };
 
 export type SectionModulesProps = {
@@ -108,4 +110,14 @@ export type SectionModulesProps = {
 export type SectionAgendaProps = {
   title: string;
   description: string;
+};
+
+export type PricingBoxProps = {
+  totalPrice: number;
+  priceInstallment: number;
+  benefits: string;
+  button: {
+    label: string;
+    url: string;
+  };
 };
