@@ -1,4 +1,5 @@
 import { SectionAboutProject } from '@/components/SectionAboutProject';
+import { SectionAgenda } from '@/components/SectionAgenda';
 import { SectionConcepts } from '@/components/SectionConcepts';
 import { SectionHero } from '@/components/SectionHero';
 import { SectionModules } from '@/components/SectionModules';
@@ -15,6 +16,7 @@ export default function Home({
   sectionTech,
   sectionConcepts,
   sectionModules,
+  sectionAgenda,
 }: LandingPageProps) {
   return (
     <>
@@ -23,6 +25,7 @@ export default function Home({
       <SectionTech {...sectionTech} />
       <SectionConcepts {...sectionConcepts} />
       <SectionModules {...sectionModules} />
+      <SectionAgenda {...sectionAgenda} />
     </>
   );
 }
@@ -40,6 +43,7 @@ export const getStaticProps: GetStaticProps = async () => {
       sectionTech: landingPage.data.attributes.sectionTech,
       sectionConcepts: landingPage.data.attributes.sectionConcepts,
       sectionModules: landingPage.data.attributes.sectionModules,
+      sectionAgenda: landingPage.data.attributes.sectionAgenda,
     },
   };
 };
