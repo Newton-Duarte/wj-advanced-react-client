@@ -1,6 +1,7 @@
 import { SectionAboutProject } from '@/components/SectionAboutProject';
 import { SectionConcepts } from '@/components/SectionConcepts';
 import { SectionHero } from '@/components/SectionHero';
+import { SectionModules } from '@/components/SectionModules';
 import { SectionTech } from '@/components/SectionTech';
 import client from '@/graphql/client';
 import { GET_LANDING_PAGE } from '@/graphql/queries/getLandingPage';
@@ -13,6 +14,7 @@ export default function Home({
   about,
   sectionTech,
   sectionConcepts,
+  sectionModules,
 }: LandingPageProps) {
   return (
     <>
@@ -20,6 +22,7 @@ export default function Home({
       <SectionAboutProject about={about} />
       <SectionTech {...sectionTech} />
       <SectionConcepts {...sectionConcepts} />
+      <SectionModules {...sectionModules} />
     </>
   );
 }
@@ -36,6 +39,7 @@ export const getStaticProps: GetStaticProps = async () => {
       about: landingPage.data.attributes.sectionAboutProject,
       sectionTech: landingPage.data.attributes.sectionTech,
       sectionConcepts: landingPage.data.attributes.sectionConcepts,
+      sectionModules: landingPage.data.attributes.sectionModules,
     },
   };
 };
