@@ -8,6 +8,7 @@ export type LandingPageProps = {
   header: HeaderProps;
   about: SectionAboutProjectProps;
   sectionTech: SectionTechProps;
+  sectionConcepts: SectionTechProps;
 };
 
 export type LandingPageResponse = {
@@ -19,6 +20,7 @@ export type LandingPageResponse = {
         header: HeaderProps;
         sectionAboutProject: SectionAboutProjectProps;
         sectionTech: SectionTechProps;
+        sectionConcepts: SectionConceptsProps;
       };
     };
   };
@@ -79,4 +81,12 @@ export type TechIconProps = {
 export type SectionTechProps = {
   title: string;
   techIcons: TechIconProps[];
+};
+
+export type SectionConceptsProps = {
+  title: string;
+  concepts: {
+    id: string;
+    title: string;
+  };
 };
