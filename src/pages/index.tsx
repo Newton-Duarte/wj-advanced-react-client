@@ -1,3 +1,4 @@
+import { PricingBox } from '@/components/PricingBox';
 import { SectionAboutProject } from '@/components/SectionAboutProject';
 import { SectionAgenda } from '@/components/SectionAgenda';
 import { SectionConcepts } from '@/components/SectionConcepts';
@@ -17,6 +18,7 @@ export default function Home({
   sectionConcepts,
   sectionModules,
   sectionAgenda,
+  pricingBox,
 }: LandingPageProps) {
   return (
     <>
@@ -26,6 +28,7 @@ export default function Home({
       <SectionConcepts {...sectionConcepts} />
       <SectionModules {...sectionModules} />
       <SectionAgenda {...sectionAgenda} />
+      <PricingBox {...pricingBox} />
     </>
   );
 }
@@ -44,6 +47,7 @@ export const getStaticProps: GetStaticProps = async () => {
       sectionConcepts: landingPage.data.attributes.sectionConcepts,
       sectionModules: landingPage.data.attributes.sectionModules,
       sectionAgenda: landingPage.data.attributes.sectionAgenda,
+      pricingBox: landingPage.data.attributes.pricingBox,
     },
   };
 };
