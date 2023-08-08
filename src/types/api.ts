@@ -10,6 +10,7 @@ export type LandingPageProps = {
   sectionTech: SectionTechProps;
   sectionConcepts: SectionTechProps;
   sectionModules: SectionModulesProps;
+  sectionAgenda: SectionAgendaProps;
 };
 
 export type LandingPageResponse = {
@@ -23,6 +24,7 @@ export type LandingPageResponse = {
         sectionTech: SectionTechProps;
         sectionConcepts: SectionConceptsProps;
         sectionModules: SectionModulesProps;
+        sectionAgenda: SectionAgendaProps;
       };
     };
   };
@@ -101,4 +103,9 @@ export type SectionModulesProps = {
     subtitle: string;
     description: string;
   }[];
+};
+
+export type SectionAgendaProps = {
+  title: string;
+  description: string;
 };
