@@ -13,7 +13,7 @@ type Props = {
   header: HeaderProps;
 };
 
-const SectionHero = ({ logo, header }: Props) => (
+export const SectionHero = ({ logo, header }: Props) => (
   <S.Wrapper>
     <Container>
       <Logo {...logo} />
@@ -38,5 +38,3 @@ const SectionHero = ({ logo, header }: Props) => (
     </Container>
   </S.Wrapper>
 );
-
-export default SectionHero;
